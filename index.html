@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FRIEND AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="chat-container">
+
+    <div class="header">
+
+        FRIEND AI
+
+        <button id="themeBtn" onclick="toggleTheme()">
+            🌙
+        </button>
+
+    </div>
+
+    <div id="chat-box" class="chat-box"></div>
+
+    <div class="input-area">
+
+        <textarea
+            id="prompt"
+            placeholder="Ask anything..."
+        ></textarea>
+
+        <div id="counter">0 Characters</div>
+
+        <div class="button-row">
+
+            <button onclick="generateText()">
+                Send 🚀
+            </button>
+
+            <button onclick="clearChat()">
+                🗑 Clear
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>

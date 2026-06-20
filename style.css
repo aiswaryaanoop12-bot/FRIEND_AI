@@ -1,0 +1,351 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Segoe UI,sans-serif;
+
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #000000,
+        #050A30,
+        #0B1F65,
+        #00AEEF
+    );
+
+    background-size:400% 400%;
+
+    animation:galaxy 15s ease infinite;
+}
+
+@keyframes galaxy{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+.chat-container{
+
+    width:900px;
+    height:90vh;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+
+    box-shadow:
+        0 0 20px rgba(0,174,239,0.4),
+        0 0 50px rgba(0,174,239,0.3);
+}
+
+.header{
+
+    text-align:center;
+
+    color:white;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    padding:20px;
+
+    border-bottom:1px solid rgba(255,255,255,0.1);
+
+    text-shadow:
+        0 0 10px #00AEEF,
+        0 0 20px #00AEEF,
+        0 0 40px #00AEEF;
+}
+
+.chat-box{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.user-message{
+
+    align-self:flex-end;
+
+    max-width:70%;
+
+    padding:15px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        135deg,
+        #00AEEF,
+        #0077FF
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    line-height:1.6;
+}
+
+.ai-message{
+
+    align-self:flex-start;
+
+    max-width:70%;
+
+    padding:15px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.1);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    color:white;
+
+    font-size:16px;
+
+    line-height:1.6;
+}
+
+.input-area{
+
+    display:flex;
+
+    gap:10px;
+
+    padding:20px;
+
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.input-area textarea{
+
+    flex:1;
+
+    height:70px;
+
+    resize:none;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    font-size:16px;
+
+    background:rgba(255,255,255,0.1);
+
+    color:white;
+}
+
+.input-area textarea::placeholder{
+
+    color:#d0eaff;
+}
+
+.input-area button{
+
+    width:150px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        #00AEEF,
+        #0077FF
+    );
+
+    transition:0.3s;
+}
+
+.input-area button:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+        0 0 20px #00AEEF,
+        0 0 40px #0077FF;
+}
+
+button {
+    min-width: 120px;
+}
+
+#counter {
+
+    color: white;
+
+    margin-top: 8px;
+
+    margin-bottom: 10px;
+
+    text-align: right;
+
+    font-size: 14px;
+
+    opacity: 0.8;
+}
+
+.button-row {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+.copy-btn {
+
+    margin-top: 8px;
+
+    padding: 8px 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    background: #00AEEF;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+.copy-btn:hover {
+
+    opacity: 0.9;
+}
+
+.ai-container {
+
+    align-self: flex-start;
+
+    max-width: 70%;
+}
+
+.ai-message:first-child {
+
+    background: linear-gradient(
+        135deg,
+        rgba(0,174,239,0.25),
+        rgba(255,255,255,0.08)
+    );
+
+    border: 1px solid #00AEEF;
+
+    box-shadow:
+        0 0 10px #00AEEF;
+}
+.user-message:hover,
+.ai-message:hover{
+    transform: translateY(-2px);
+    transition: 0.3s;
+}
+
+#themeBtn{
+
+    float:right;
+
+    margin-left:20px;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:8px 14px;
+
+    border-radius:10px;
+
+    background:#00AEEF;
+
+    color:white;
+
+    font-size:18px;
+}
+
+.light-mode{
+
+    background:#f5f7ff !important;
+}
+
+.light-mode .chat-container{
+
+    background:white;
+
+    color:black;
+}
+
+.light-mode .header{
+
+    color:#0B1F65;
+
+    text-shadow:none;
+}
+
+.light-mode .ai-message{
+
+    color:black;
+
+    background:#e8eefc;
+}
+
+.light-mode textarea{
+
+    background:#eef2ff !important;
+
+    color:black !important;
+}
+
+.light-mode #counter{
+
+    color:black;
+}
