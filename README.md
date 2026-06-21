@@ -107,7 +107,6 @@ http://127.0.0.1:8000
 
 ## 🎯 Future Improvements
 
-- Theme Toggle
 - Chat History
 - Sidebar
 - Export Chat
